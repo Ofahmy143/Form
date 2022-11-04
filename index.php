@@ -1,8 +1,11 @@
 
+
+
+
 <?php include('header.php');?>
 
 <section>
-<form action="" method ="POST">
+<form action="mySQL.php" method ="POST">
 
 <label>First name:</label>
 <input type="text" name="firstName"> <br>
@@ -16,7 +19,7 @@
 <label>Password:</label>
 <input type="text" name="password"><br>
 
-<input type="submit" class="btn btn-primary">
+<input type="submit" value="submit" name="submit" class="btn btn-primary">
 <br>
 
 </form>
