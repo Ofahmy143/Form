@@ -1,5 +1,7 @@
 
 <?php include('header.php');?>
+
+<section>
 <form action="" method ="POST">
 
 <label>First name:</label>
@@ -19,6 +21,7 @@
 
 </form>
 
+</section>
 
 <?php include('footer.php');?>
 
