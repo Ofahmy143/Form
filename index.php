@@ -1,11 +1,11 @@
 
 
 
-
 <?php include('header.php');?>
 
+
 <section>
-<form action="mySQL.php" method ="POST">
+<form action="Database/mySQL.php" method ="POST">
 
 <label>First name:</label>
 <input type="text" name="firstName"> <br>
