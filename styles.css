@@ -1,12 +1,49 @@
+body{
+    background-color: #C5C4C5 ; 
+
+}
 form{
 display: flex;
 flex-direction: column;
 justify-content: center;
-width:40%
+width: 60%;
 
 }
 
 section{
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+section div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 70%;
+    background-color: #7F191C;
+    ;
+}
+
+div h2{
+    font-size: 50px;
+    margin-top: -10px;
+    margin-bottom: 40px;
+    color: #C5C4C5;
+
+}
+label{
+    color: #C5C4C5;
+
+}
+button{
+    background-color: #C5C4C5 ; 
+}
+
+input[type=text]{
+    height: 40px;
 }
