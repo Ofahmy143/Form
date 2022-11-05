@@ -4,12 +4,9 @@
 
 <section>
 <p class="ErrorP">
-
-Submitted Successfully
+     Submitted Successfully
 <a href="index.php">
-
-<button class="btn btn-warning">Submit another response</button>
-
+     <button class="btn btn-warning">Submit another response</button>
 </a>
 </p>
 
