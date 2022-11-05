@@ -8,30 +8,29 @@ if(isset($_POST['submit'])){
 
     $error_counter =0;
 
-    if(!preg_match('/^[a-zA-Z\s]{3,11}$/' , $fn)){
+    if(!preg_match('/^[a-zA-Z\s]{3,}$/' , $fn)){
         $error_counter ++;
         
     }
-    if(!preg_match( '/^[a-zA-Z\s]{3,11}$/', $ln)){
+    if(!preg_match( '/^[a-zA-Z\s]{3,}$/', $ln)){
         $error_counter ++;
 
     }
-    if(!preg_match( '/^([a-zA-z\s]+)@([a-zA-z]+)\.([a-z.]{2,})$/', $em)){
-        $error_counter ++;
+    // if(!preg_match( '/^([a-zA-z\s]+)@([a-zA-z]+)\.([a-z.]{2,})$/', $em)){
+    //     $error_counter ++;
 
-    }
+    // }
     if(!preg_match( '/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/', $pw)){
         $error_counter ++;
 
     }
 
     if($error_counter == 0){
-        header('location: ../Database/mySQL.php');
+        include( '../Database/mySQL.php');
 
     }else{
-        echo 'validation error';
+        header('location: ../form/Error.php');
 
-        //header('location: ../form/index.php');
     }
 
 }

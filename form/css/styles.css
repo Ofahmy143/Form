@@ -28,6 +28,18 @@ section div{
     background-color: #7F191C;
     
 }
+.ErrorP{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: #7F191C;
+    height: 30%;
+    width: 40%;
+    color: #C5C4C5;
+}
 
 div h2{
     font-size: 50px;
@@ -49,6 +61,5 @@ input[type=text]{
 }
 
 div p{
-    margin-top: -10;
     color: #C5C4C5;
 }

@@ -36,33 +36,44 @@ if(!$connection){
     echo 'Connection error' . mysqli_connect_error();
 }
 
-$firstName = mysqli_real_escape_string($connection,htmlspecialchars($_POST['firstName']));
-$lastName = mysqli_real_escape_string($connection,htmlspecialchars($_POST['lastName']));
-$email = mysqli_real_escape_string($connection,htmlspecialchars($_POST['email']));
-$password = mysqli_real_escape_string($connection,htmlspecialchars($_POST['password']));
-
-$sql_query2 = "INSERT INTO form(first_name,last_name,email,password) VALUES('$firstName'
-,'$lastName','$email','$password')";
 
 
 
 
-$email_vaildation = "SELECT * FROM form WHERE email = '$email'";
+$email_vaildation = "SELECT * FROM form WHERE email = '$em'";
+echo '*************************************'.$email_vaildation . '<br>';
 $email_result = mysqli_fetch_all(mysqli_query($connection,$email_vaildation),MYSQLI_ASSOC);
-if(empty($email_result)){
+echo '*************************************'.empty($email_result);
+
+
+if(empty($email_result) == 1 ){
+
+
+
+    $firstName = mysqli_real_escape_string($connection,htmlspecialchars($_POST['firstName']));
+    $lastName = mysqli_real_escape_string($connection,htmlspecialchars($_POST['lastName']));
+    $email = mysqli_real_escape_string($connection,htmlspecialchars($_POST['email']));
+    $password = mysqli_real_escape_string($connection,htmlspecialchars($_POST['password']));
+    
+    $sql_query2 = "INSERT INTO form(first_name,last_name,email,password) VALUES('$firstName'
+    ,'$lastName','$email','$password')";
+
+
 
     if(mysqli_query($connection,$sql_query2)){
-        header('location: ../form/index.php');
+        header('location: ../form/Success.php');
         //sucesss
     }else{
+
         echo 'Error' . mysqli_error($connection);
     }
     
 
 }else {
-    echo 'Email already in the database';
-    header('location: ../form/index.php');
+    header('location: ../form/Error.php');
 
+    echo 'Email already in the database   ';
+    
 }
 
 

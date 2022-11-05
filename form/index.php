@@ -1,7 +1,7 @@
 
 
-
 <?php include('header.php');?>
+
 
 
 <section>
@@ -19,11 +19,11 @@
 
 <label>Email:</label>
 <input type="text" name="email">
-<p>enter a valid email ex: myEmail@mydomain.com</p>
+<p>Enter a valid email ex: myEmail@mydomain.com Must be not registered in our database</p>
 
 
 <label>Password:</label>
-<input type="text" name="password">
+<input type="text" name="password"> 
 <p>Alphanumeric must contain at least 8 characters one uppercase , one lowercase , number and a special character</p>
 
 
