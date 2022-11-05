@@ -16,12 +16,14 @@ if(isset($_POST['submit'])){
         $error_counter ++;
 
     }
-    // if(!preg_match( '/^([a-zA-z\s]+)@([a-zA-z]+)\.([a-z.]{2,})$/', $em)){
-    //     $error_counter ++;
+     if(!preg_match( '/^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/i', $em)){
+         $error_counter ++;
 
-    // }
-    if(!preg_match( '/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/', $pw)){
+     }
+    if(!preg_match( '/^(?=.*?[a-z])(?=.*?[A-Z])(?=.*?\d)(?=.*?[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/', $pw)){
         $error_counter ++;
+
+       
 
     }
 
